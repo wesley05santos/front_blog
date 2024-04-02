@@ -7,4 +7,8 @@
   <%= link_to "Back to articles", articles_path %>
 
   <%= button_to "Destroy this article", @article, method: :delete %>
+  <%= turbo_frame_tag 'likes' do %>
+    <%= render 'like', article: @article %>
+  <% end %>
 </div>
+
